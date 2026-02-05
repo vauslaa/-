@@ -1,0 +1,784 @@
+.sheet {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.num-font {
+  font-family: Arial, sans-serif;
+}
+
+.sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+
+.company-meta {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  color: #2b7bf7;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  border-bottom: 2px solid #2b7bf7;
+  line-height: 1.2;
+}
+
+.title-section {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  z-index: 10;
+}
+
+.main-title {
+  color: #1e75ff;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.sub-title {
+  color: #1e75ff;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  color: #222;
+  z-index: 10;
+}
+
+.info-row {
+  display: flex;
+  width: 300px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.label {
+  width: 60px;
+  text-align: justify;
+  text-align-last: justify;
+  font-weight: 500;
+}
+
+.colon {
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.value {
+  font-weight: 500;
+  color: #000;
+}
+
+.footer-shapes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.shape {
+  position: absolute;
+  transform: skewY(-8deg);
+  transform-origin: bottom left;
+}
+
+.shape-light {
+  bottom: -100px;
+  left: -50px;
+  width: 80%;
+  height: 400px;
+  background: linear-gradient(
+    120deg,
+    rgba(230, 245, 255, 0.8),
+    rgba(210, 235, 255, 0.5)
+  );
+  z-index: 1;
+}
+
+.shape-medium {
+  bottom: 0px;
+  left: 10%;
+  width: 50%;
+  height: 280px;
+  background: rgba(100, 160, 255, 0.3);
+  z-index: 2;
+}
+
+.shape-dark {
+  bottom: -50px;
+  right: -20px;
+  width: 65%;
+  height: 350px;
+  background: linear-gradient(135deg, #6babff 0%, #3b8dff 100%);
+  opacity: 0.9;
+  z-index: 3;
+}
+
+.guide-header {
+  position: relative;
+  height: 140px;
+  background: linear-gradient(90deg, #1677ff 44.21%, #ffffff 100%);
+  color: #fff;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: -40px -50px 40px -50px;
+}
+
+.header-watermark {
+  position: absolute;
+  top: -30px;
+  left: 100px;
+  font-size: 200px;
+  font-weight: 400;
+  opacity: 0.1;
+  pointer-events: none;
+  letter-spacing: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.guide-title {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.guide-subtitle {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  opacity: 0.9;
+  letter-spacing: 4px;
+}
+
+.guide-body {
+  padding: 0 10px;
+}
+
+.guide-section {
+  margin-bottom: 35px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  color: #1e75ff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  fill: #1e75ff;
+}
+
+.text-block {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.list-item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.num-badge {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #f0f0f0;
+  color: #888;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  display: flex;
+  line-height: 18px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 12px;
+  margin-top: 4px;
+}
+
+.list-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.toc-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 60px 80px 60px;
+}
+
+.toc-row {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.toc-dots {
+  flex-grow: 1;
+  border-bottom: 2px dotted #ccc;
+  margin: 0 10px 5px 10px;
+  opacity: 0.6;
+}
+.toc-dot {
+  flex-grow: 1;
+  border-bottom: 2px dotted #ccc;
+  margin: 0 10px 5px 10px;
+  opacity: 0.6;
+  width: 374.0000000000014px;
+}
+.toc-page {
+  flex: 0 0 32px; /* 固定列宽 32px，可按需要调大/调小 */
+  text-align: right; /* 数字靠右 */
+  font-family: Arial, sans-serif;
+  color: #1e75ff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.level-1 {
+  padding: 10px 0;
+}
+
+.level-1 .toc-title {
+  font-size: 20px;
+  color: #5d9cec;
+  font-weight: 500;
+}
+
+.toc-group {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10px 0;
+}
+
+.level-2 {
+  margin-bottom: 6px;
+}
+
+.level-2 .toc-title {
+  padding-left: 40px;
+  width: 160px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+}
+
+.page-content-layout {
+  padding: 30px 50px;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.header-badge {
+  background-color: #1e75ff;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: -50px;
+  border-radius: 2px 0 0 2px;
+}
+
+.intro-box {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.intro-title {
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.highlight {
+  color: #2b7bf7;
+  font-weight: 500;
+}
+
+.sub-heading {
+  font-size: 18px;
+  color: #2b7bf7;
+  font-weight: bold;
+}
+
+.section-block {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.section {
+  padding-bottom: 10px;
+}
+
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #333;
+}
+
+.score-table td {
+  border: 1px solid #eee;
+  padding: 12px;
+  text-align: center;
+  width: 25%;
+}
+
+.score-table tr:nth-child(odd) {
+  background-color: #fcfcfc;
+}
+
+.score-val {
+  font-family: Arial, sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.factor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.factor-score {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+
+.big-num {
+  font-size: 32px;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.small-text {
+  font-size: 14px;
+  color: #666;
+  margin-left: 5px;
+}
+
+.badge-large {
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  right: 0;
+}
+
+.factor-desc {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.factor-list {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.factor-list li {
+  margin-bottom: 5px;
+}
+
+.assessment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ah-left {
+  display: flex;
+  align-items: baseline;
+}
+
+.ah-title {
+  font-size: 28px;
+  color: #1e75ff;
+  /* 蓝色标题 */
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.ah-en {
+  font-size: 14px;
+  color: #4da1ff;
+  /* 浅蓝色英文 */
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  /* 全大写 */
+  letter-spacing: 1px;
+}
+
+/* --- ESFP 区域 --- */
+.esfp-section {
+  display: flex;
+  justify-content: flex-end;
+  /* 靠右对齐 */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.esfp-title {
+  font-size: 36px;
+  color: #1e75ff;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
+  margin-right: 15px;
+}
+
+.esfp-info {
+  text-align: left;
+  font-size: 12px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.esfp-traits {
+  font-weight: bold;
+}
+
+.esfp-alias {
+  color: #666;
+  font-size: 11px;
+}
+
+/* --- 特色 Banner (蓝色斜切条) --- */
+.feature-banner {
+  position: relative;
+  height: 73px; /* 必须有高度 */
+  background: #f7f7f7; /* 浅灰背景 */
+  display: flex;
+  align-items: center;
+  margin-left: -50px;
+  margin-right: -50px;
+  margin-bottom: 20px;
+}
+
+/* 2. 左侧蓝色斜切块 (核心：没有这个就看不见蓝色和图标) */
+.fb-shape {
+  position: relative;
+  width: 160px; /* 必须有宽度 */
+  height: 110px;
+  background: #1e75ff; /* 蓝色背景 */
+  margin-top: -35px;
+  /* 倾斜变形，形成平行四边形 */
+  transform: skewX(-20deg);
+  border-radius: 0 15px 0 0;
+  /* 向左平移，盖住左边缘的空隙 */
+  margin-left: -30px;
+
+  /* 布局内部图标 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+/* 3. 图标：需要反向倾斜回来，不然图标也是歪的 */
+.fb-icon {
+  width: 40px;
+  height: 40px;
+  transform: skewX(20deg); /* 反向抵消父容器的倾斜 */
+}
+
+/* 4. 中间文字区域 */
+.fb-content {
+  margin-left: 30px;
+  display: flex;
+  align-items: baseline;
+  z-index: 2; /* 确保文字在水印上面 */
+}
+
+.fb-cn {
+  font-size: 28px;
+  color: #1e75ff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.fb-cn-dark {
+  color: #333; /* "特征" 黑色 */
+}
+
+.fb-en {
+  font-size: 16px;
+  color: #999;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* 5. 右侧水印图标 */
+.fb-watermark {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  fill: #f0f0f0; /* 极淡的灰色，HTML里的 fill="#fff" 可能会让它在白底下看不见，这里CSS覆盖一下 */
+  z-index: 1;
+}
+
+.tb-title {
+  width: 100%;
+  font-size: 18px;
+  color: #1e75ff;
+  font-weight: bold;
+  border-bottom: 1px solid #f5f5f5;
+  /* 极淡的分割线 */
+  padding-bottom: 5px;
+  display: inline-block;
+  margin: 20px 0 0 0;
+  /* 只有文字下方有线 */
+}
+
+.tb-content p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+/* 三角里那个“弱”字 */
+.fb-weak-text {
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  transform: translateX(4px); /* 微调，让字看起来更居中 */
+}
+.work-intro {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.work-intro p {
+  margin: 0 0;
+  text-align: justify;
+}
+.career-list {
+  font-size: 13px;
+  color: #1e75ff;
+  margin: 6px 0 10px;
+}
+.appendix-page {
+  position: relative; /* 给水印和底部文字做定位基准 */
+}
+
+/* 顶部标题区域 */
+.appendix-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  z-index: 2; /* 在水印上面 */
+}
+
+.appendix-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.appendix-title {
+  font-size: 64px;
+  margin-top: 0px;
+  color: #1e75ff;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.appendix-subtitle {
+  margin: 0 0;
+  font-size: 16px;
+  color: #4da1ff;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* 大号 MBTI 水印 */
+.appendix-watermark {
+  position: absolute;
+  top: -40px;
+  left: 40px;
+  font-size: 220px;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
+  letter-spacing: 8px;
+  color: rgba(0, 0, 0, 0.02); /* 很淡的灰色 */
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+/* 小节标题：被试信息 / 测评说明 */
+.appendix-section {
+  position: relative;
+  z-index: 2; /* 确保不被水印盖住 */
+  margin-bottom: 30px;
+}
+
+.appendix-section-title {
+  font-size: 18px;
+  color: #1e75ff;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* 被试信息表格 */
+.appendix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background-color: #f9fcff; /* 淡淡的蓝底 */
+}
+
+.appendix-table td {
+  border: 1px solid #e6f0ff;
+  padding: 12px 18px;
+}
+
+.appendix-table .label-cell {
+  width: 16%;
+  color: #666;
+}
+
+.appendix-table .value-cell {
+  color: #333;
+  font-weight: 500;
+}
+
+/* 测评说明文本 */
+.appendix-text p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 4px;
+  text-align: justify;
+}
+
+/* 底部“报告结束”提示 */
+.appendix-footer-note {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #c0c0c0;
+}
+.header-tag {
+  background-color: #1e75ff;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: -50px;
+  margin-top: -70px;
+  border-radius: 2px 0 0 2px;
+}
